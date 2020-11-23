@@ -1,3 +1,1 @@
-$(function () {
-  console.log(1);
-})
+import App from "./vue/app";
