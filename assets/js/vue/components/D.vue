@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="phase">
     <h2>Dependency inversion principle</h2>
-    <blockquote class="blockquote">
+    <blockquote class="blockquote phase-step">
       One should "depend upon abstractions, [not] concretions."
     </blockquote>
   </div>

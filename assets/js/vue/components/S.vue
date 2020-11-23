@@ -1,14 +1,14 @@
 <template>
-  <div>
+  <div class="phase">
     <h2>Single-responsibility principle</h2>
-    <blockquote class="blockquote">
+    <blockquote class="blockquote phase-step">
       A class should only have a single responsibility, that is, only changes to
       one part of the software's specification should be able to affect the
       specification of the class.
     </blockquote>
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 phase-step">
         <ClassExposer
           :config="{
             name: 'Computing',
@@ -22,7 +22,7 @@
           }"
         />
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 phase-step">
         <ClassExposer
           :config="{
             name: 'NumberFetcher',

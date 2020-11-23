@@ -13,4 +13,12 @@ $(function () {
       $('.main-content').removeClass('tab-fixed')
     }
   });
+
+  $(document).on('click', '.phase', function () {
+    if (!$(".phase-step:hidden").length) {
+      $(".phase-step").fadeOut(0);
+    } else {
+      $(".phase-step:hidden").first().fadeIn(300);
+    }
+  })
 });
