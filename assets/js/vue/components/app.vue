@@ -15,7 +15,7 @@
         </router-link>
       </li>
     </ul>
-    <router-view></router-view>
+    <router-view class="main-content container"></router-view>
   </div>
 </template>
 
