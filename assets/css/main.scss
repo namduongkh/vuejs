@@ -124,3 +124,6 @@
   border-radius: 5px;
   color: #555;
 }
+.phase [class*="phase-step"] {
+  display: none;
+}

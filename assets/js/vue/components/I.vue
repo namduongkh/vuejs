@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="phase">
     <h2>Interface segregation principle</h2>
-    <blockquote class="blockquote">
+    <blockquote class="blockquote phase-step">
       Many client-specific interfaces are better than one general-purpose
       interface
     </blockquote>
