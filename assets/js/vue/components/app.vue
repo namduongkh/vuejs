@@ -1,6 +1,7 @@
 <template>
   <div>
-    <ul class="nav nav-tabs-list" id="myTab" role="tablist">
+    <Intro />
+    <ul class="nav nav-pills nav-fill" role="tablist">
       <li
         class="nav-item"
         v-for="(r, index) in routes"
@@ -20,6 +21,7 @@
 
 <script>
 import routes from "../config/routes";
+import Intro from "./Intro.vue";
 
 export default {
   name: "App",
@@ -27,6 +29,9 @@ export default {
     return {
       routes,
     };
+  },
+  components: {
+    Intro,
   },
 };
 </script>
