@@ -14,11 +14,12 @@ $(function () {
     }
   });
 
-  $(document).on('click', '.phase', function () {
+  $(document).on('click', '.next-phase', function () {
+    let parent = $(this).parents().first();
     if (!$(".phase-step:hidden").length) {
-      $(".phase-step").fadeOut(0);
+      parent.find(".phase-step").fadeOut(0);
     } else {
-      $(".phase-step:hidden").first().fadeIn(300);
+      parent.find(".phase-step:hidden").first().fadeIn(300);
     }
   })
 });

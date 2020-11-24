@@ -8,38 +8,30 @@
     </blockquote>
 
     <div class="row">
-      <div class="col-md-6 phase-step">
+      <div class="col-md-6">
         <ClassExposer
+          class="phase-step"
           :config="{
             name: 'Computing',
-            actions: [
-              {
-                name: 'fetch_number',
-                code: '// lấy kết quả xổ số các lần gần nhất',
-              },
-              { name: 'analyze', code: '// tính toán kết quả bằng công thức' },
-            ],
+            actions: [actions.fetch_number, actions.analyze],
           }"
         />
+        <ul class="phase-step">
+          <li>1</li>
+          <li>2</li>
+        </ul>
       </div>
       <div class="col-md-6 phase-step">
         <ClassExposer
           :config="{
             name: 'NumberFetcher',
-            actions: [
-              {
-                name: 'get_result',
-                code: '// lấy kết quả xổ số các lần gần nhất',
-              },
-            ],
+            actions: [actions.fetch_number],
           }"
         />
         <ClassExposer
           :config="{
             name: 'NumberAnalyst',
-            actions: [
-              { name: 'analyze', code: '// tính toán kết quả bằng công thức' },
-            ],
+            actions: [actions.analyze],
           }"
         />
       </div>
@@ -48,8 +40,13 @@
 </template>
 
 <script>
+import actions from "../config/actions";
+
 export default {
   name: "S",
+  data() {
+    return { actions };
+  },
 };
 </script>
 

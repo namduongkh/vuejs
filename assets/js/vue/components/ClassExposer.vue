@@ -1,8 +1,6 @@
 <template>
   <div class="class-exposer">
-    <h2 class="class-exposer_name">
-      {{ config.name }}
-    </h2>
+    <h4 class="class-exposer_name" v-html="config.name"></h4>
     <ul>
       <li
         class="class-exposer_action"

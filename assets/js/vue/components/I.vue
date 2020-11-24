@@ -9,8 +9,13 @@
 </template>
 
 <script>
+import actions from "../config/actions";
+
 export default {
   name: "I",
+  data() {
+    return { actions };
+  },
 };
 </script>
 
