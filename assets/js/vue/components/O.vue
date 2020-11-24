@@ -6,6 +6,14 @@
       modification.
     </blockquote>
 
+    <div class="phase-step">
+      <div class="d-flex align-items-center justify-content-center">
+        <ImageCircle src="/assets/img/dunghuynh.png" />
+        <div class="line"></div>
+        <ImageCircle src="/assets/img/lottery.jpg" />
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-md-6">
         <ClassExposer

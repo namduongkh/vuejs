@@ -139,6 +139,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 10;
 }
 .scroll-down {
   font-size: 0.7rem;
@@ -156,5 +157,30 @@
   color: #555;
 }
 .phase [class*="phase-step"] {
-  // display: none;
+  display: none;
+}
+.image-circle {
+  display: inline-block;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+  border: 3px solid rgb(127, 91, 255);
+  overflow: hidden;
+  margin: 1rem;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+.line {
+  display: inline-block;
+  border-top: 2px solid #ccc;
+  width: 5rem;
 }
