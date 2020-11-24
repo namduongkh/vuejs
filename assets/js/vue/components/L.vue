@@ -6,6 +6,14 @@
       subtypes without altering the correctness of that program.
     </blockquote>
 
+    <div class="phase-step">
+      <div class="d-flex align-items-center justify-content-center">
+        <ImageCircle src="/assets/img/dunghuynh.png" />
+        <div class="line"></div>
+        <ImageCircle src="/assets/img/lottery.jpg" />
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-sm-6 phase-step">
         <ClassExposer
@@ -28,6 +36,14 @@
             actions: [actions.generate2, actions.generate3WithError],
           }"
         />
+      </div>
+    </div>
+
+    <div class="phase-step">
+      <div class="d-flex align-items-center justify-content-center">
+        <ImageCircle src="/assets/img/laptop.png" />
+        <div class="line"></div>
+        <ImageCircle src="/assets/img/pc.svg" />
       </div>
     </div>
 
@@ -55,13 +71,14 @@
       <div class="col-sm-6 phase-step">
         <ClassExposer
           :config="{
-            name: '<small>module</small> DevPolicy',
+            name: '<small>module</small> HasLaptop',
             actions: [actions.rubyRemote],
           }"
         />
         <ClassExposer
           :config="{
-            name: 'RubyDev < Dev<br/><small class=\'pl-4\'>include DevPolicy</small>',
+            name:
+              'RubyDev < Dev<br/><small class=\'pl-4\'>include HasLaptop</small>',
             actions: [actions.rubyRemote],
           }"
         />
