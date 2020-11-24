@@ -7,7 +7,7 @@
   transition: all 0.3s linear;
 }
 .intro {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +22,7 @@
     color: #555;
     border: 0.5rem solid #555;
     padding: 0 1rem;
+    text-align: center;
   }
   .intro_subtext {
     color: #999;
@@ -30,6 +31,12 @@
   .intro_maintext_dot {
     opacity: 0;
     font-size: 0px !important;
+  }
+  .intro_info_text {
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.5rem;
   }
 }
 .intro_phase_0 {
@@ -41,7 +48,8 @@
     padding: unset;
   }
 }
-.intro_phase_2 {
+.intro_phase_2,
+.intro_phase_3 {
   .intro_subtext {
     opacity: 0;
   }
@@ -55,6 +63,11 @@
     font-size: inherit !important;
   }
   .scroll-down {
+    display: block;
+  }
+}
+.intro_phase_3 {
+  .intro_info_text {
     display: block;
   }
 }
@@ -73,6 +86,10 @@
   .class-exposer_action-name {
     padding-left: 0.25rem;
     font-weight: 700;
+  }
+
+  ul {
+    padding-inline-start: 2rem;
   }
 
   li.class-exposer_action {
@@ -94,9 +111,24 @@
   min-height: 100vh;
   color: #444;
   padding-top: 2rem;
+  position: relative;
+  font-size: 1.1rem;
 
+  .next-phase {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+    background-color: #ccc;
+  }
   &.tab-fixed {
     margin-top: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
   }
 }
 .nav {
@@ -118,12 +150,11 @@
   bottom: 1em;
 }
 .blockquote {
-  border-left: 0.5rem solid rgb(97, 11, 255);
+  border: 1px solid rgb(97, 11, 255);
+  border-left-width: 0.4rem;
   padding: 0.5rem;
-  box-shadow: 0 0 0 1px #ccc;
-  border-radius: 5px;
   color: #555;
 }
 .phase [class*="phase-step"] {
-  display: none;
+  // display: none;
 }

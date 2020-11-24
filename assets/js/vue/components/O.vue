@@ -7,72 +7,42 @@
     </blockquote>
 
     <div class="row">
-      <div class="col-md-6 phase-step">
+      <div class="col-md-6">
         <ClassExposer
+          class="phase-step"
           :config="{
             name: 'NumberAnalyst',
-            actions: [
-              {
-                name: 'analyze',
-                code: `
-// lấy cặp số xuất hiện nhiều nhất
-              `,
-              },
-            ],
+            actions: [actions.analyzeWithFormular],
           }"
         />
+        <ul class="phase-step">
+          <li>Formula change</li>
+          <li>Multiple formula</li>
+        </ul>
       </div>
       <div class="col-md-6 phase-step">
         <ClassExposer
           :config="{
             name: 'NumberAnalyst',
-            actions: [
-              {
-                name: 'analyze(formula)',
-                code: `
-formula.perform
-              `,
-              },
-            ],
+            actions: [actions.analyzeWithFormularAndParams],
           }"
         />
         <ClassExposer
           :config="{
             name: 'Formula1',
-            actions: [
-              {
-                name: 'perform',
-                code: `
-// tính toán theo phương pháp ngẫu nhiên
-              `,
-              },
-            ],
+            actions: [actions.formula1],
           }"
         />
         <ClassExposer
           :config="{
             name: 'Formula2',
-            actions: [
-              {
-                name: 'perform',
-                code: `
-// tính toán theo phương pháp thợ ghép ảnh
-              `,
-              },
-            ],
+            actions: [actions.formula2],
           }"
         />
         <ClassExposer
           :config="{
             name: 'Formula3',
-            actions: [
-              {
-                name: 'perform',
-                code: `
-// tính toán theo phương pháp thiên văn vũ trụ học
-              `,
-              },
-            ],
+            actions: [actions.formula3],
           }"
         />
       </div>
@@ -81,8 +51,13 @@ formula.perform
 </template>
 
 <script>
+import actions from "../config/actions";
+
 export default {
   name: "O",
+  data() {
+    return { actions };
+  },
 };
 </script>
 

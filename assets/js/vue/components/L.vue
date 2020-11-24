@@ -5,12 +5,79 @@
       Objects in a program should be replaceable with instances of their
       subtypes without altering the correctness of that program.
     </blockquote>
+
+    <div class="row">
+      <div class="col-sm-6 phase-step">
+        <ClassExposer
+          :config="{
+            name: 'NumberGenerator2',
+            actions: [actions.generate2],
+          }"
+        />
+        <ClassExposer
+          :config="{
+            name: 'NumberGenerator3 < NumberGenerator2',
+            actions: [actions.generate3],
+          }"
+        />
+      </div>
+      <div class="col-sm-6 phase-step">
+        <ClassExposer
+          :config="{
+            name: 'NumberGenerator2',
+            actions: [actions.generate2, actions.generate3WithError],
+          }"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 phase-step">
+        <ClassExposer
+          :config="{
+            name: 'Dev',
+            actions: [actions.rubyRemote],
+          }"
+        />
+        <ClassExposer
+          :config="{
+            name: 'RubyDev < Dev',
+            actions: [actions.rubyRemote],
+          }"
+        />
+        <ClassExposer
+          :config="{
+            name: 'DotNetDev < Dev',
+            actions: [actions.dotNetRemote],
+          }"
+        />
+      </div>
+      <div class="col-sm-6 phase-step">
+        <ClassExposer
+          :config="{
+            name: '<small>module</small> DevPolicy',
+            actions: [actions.rubyRemote],
+          }"
+        />
+        <ClassExposer
+          :config="{
+            name: 'RubyDev < Dev<br/><small class=\'pl-4\'>include DevPolicy</small>',
+            actions: [actions.rubyRemote],
+          }"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import actions from "../config/actions";
+
 export default {
   name: "L",
+  data() {
+    return { actions };
+  },
 };
 </script>
 

@@ -15,7 +15,10 @@
         </router-link>
       </li>
     </ul>
-    <router-view class="main-content container"></router-view>
+    <div class="main-content">
+      <div class="next-phase"></div>
+      <router-view class="container"></router-view>
+    </div>
   </div>
 </template>
 

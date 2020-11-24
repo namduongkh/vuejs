@@ -1,5 +1,5 @@
 <template>
-  <div class="intro" @click="togglePhase()">
+  <div class="intro" @click="changePhase()">
     <div class="intro-phase" :class="'intro_phase_' + phase">
       <div class="intro_subtext">border: 1px</div>
       <h1 class="intro_maintext">
@@ -14,6 +14,14 @@
         D
       </h1>
       <div class="intro_subtext text-right">#000000</div>
+      <div class="intro_info_text text-center">
+        In object-oriented computer programming, SOLID is a mnemonic acronym for
+        five design principles intended to make software designs more
+        understandable, flexible, and maintainable. It is not related to the
+        GRASP software design principles. The principles are a subset of many
+        principles promoted by American software engineer and instructor Robert
+        C. Martin.
+      </div>
     </div>
   </div>
 </template>
@@ -24,12 +32,13 @@ export default {
   data() {
     return {
       phase: 0,
+      maxPhase: 3,
     };
   },
   methods: {
-    togglePhase() {
+    changePhase() {
       this.phase++;
-      if (this.phase > 2) this.phase = 0;
+      if (this.phase > this.maxPhase) this.phase = this.maxPhase;
     },
   },
 };

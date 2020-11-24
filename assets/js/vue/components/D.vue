@@ -8,8 +8,13 @@
 </template>
 
 <script>
+import actions from "../config/actions";
+
 export default {
   name: "D",
+  data() {
+    return { actions };
+  },
 };
 </script>
 
