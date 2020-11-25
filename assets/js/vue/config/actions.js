@@ -47,4 +47,20 @@ export default {
     name: 'remote',
     code: '// Impossible<br/>raise Error'
   },
+  dealPerform: {
+    name: 'perform',
+    code: 'DealerDK.perform(number, \'1 sổ đỏ\')'
+  },
+  dealPerformWithDealer: {
+    name: 'perform(dealer = DealerDK.new)',
+    code: 'dealer.perform(number, \'1 sổ đỏ\')'
+  },
+  dealerAtDK: {
+    name: 'perform(number, amount)',
+    code: '// 1 sổ đỏ thành 2 sổ đỏ'
+  },
+  dealerAtNT: {
+    name: 'perform(number, amount)',
+    code: '// 1 sổ đỏ thành 3 sổ đỏ'
+  },
 }
