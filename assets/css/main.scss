@@ -126,6 +126,11 @@
   }
   &.tab-fixed {
     margin-top: 4rem;
+
+    .next-phase {
+      position: fixed;
+      top: 4em;
+    }
   }
   h2 {
     font-size: 2.5rem;
