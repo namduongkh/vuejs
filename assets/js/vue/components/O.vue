@@ -8,9 +8,9 @@
 
     <div class="phase-step">
       <div class="d-flex align-items-center justify-content-center">
-        <ImageCircle src="/assets/img/dunghuynh.png" />
+        <ImageCircle src="./assets/img/dunghuynh.png" />
         <div class="line"></div>
-        <ImageCircle src="/assets/img/lottery.jpg" />
+        <ImageCircle src="./assets/img/lottery.jpg" />
       </div>
     </div>
 
