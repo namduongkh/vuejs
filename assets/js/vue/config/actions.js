@@ -63,4 +63,16 @@ export default {
     name: 'perform(number, amount)',
     code: '// 1 sổ đỏ thành 3 sổ đỏ'
   },
+  betWithHourse: {
+    name: 'bet_by_house',
+    code: '// 1 cái nhà thành 2 cái nhà'
+  },
+  betWithCar: {
+    name: 'bet_by_car',
+    code: '// 1 ô tô thành 2 ô tô'
+  },
+  betWithMoney: {
+    name: 'bet_by_money',
+    code: '// 1 ăn 700'
+  },
 }
