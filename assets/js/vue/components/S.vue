@@ -25,8 +25,8 @@
           }"
         />
         <ul class="phase-step">
-          <li>1</li>
-          <li>2</li>
+          <li>Thay đổi cách lấy dữ liệu</li>
+          <li>Thay đổi cách phân tích số</li>
         </ul>
       </div>
       <div class="col-md-6 phase-step">

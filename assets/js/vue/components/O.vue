@@ -19,37 +19,32 @@
         <ClassExposer
           class="phase-step"
           :config="{
-            name: 'NumberAnalyst',
-            actions: [actions.analyzeWithFormular],
+            name: 'Formula',
+            actions: [actions.formula1],
           }"
         />
         <ul class="phase-step">
-          <li>Formula change</li>
-          <li>Multiple formula</li>
+          <li>Thay đổi công thức phân tích</li>
+          <li>Nghiệm ra công thức mới</li>
         </ul>
       </div>
       <div class="col-md-6 phase-step">
         <ClassExposer
+          class="phase-step"
           :config="{
-            name: 'NumberAnalyst',
-            actions: [actions.analyzeWithFormularAndParams],
-          }"
-        />
-        <ClassExposer
-          :config="{
-            name: 'Formula1',
+            name: 'FormulaBase',
             actions: [actions.formula1],
           }"
         />
         <ClassExposer
           :config="{
-            name: 'Formula2',
+            name: 'FormulaX < FomularBase',
             actions: [actions.formula2],
           }"
         />
         <ClassExposer
           :config="{
-            name: 'Formula3',
+            name: 'FormulaY < FomularBase',
             actions: [actions.formula3],
           }"
         />
