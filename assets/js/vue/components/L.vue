@@ -6,7 +6,7 @@
       subtypes without altering the correctness of that program.
     </blockquote>
 
-    <div class="phase-step">
+    <!-- <div class="phase-step">
       <div class="d-flex align-items-center justify-content-center">
         <ImageCircle src="./assets/img/dunghuynh.png" />
         <div class="line"></div>
@@ -37,7 +37,7 @@
           }"
         />
       </div>
-    </div>
+    </div> -->
 
     <div class="phase-step">
       <div class="d-flex align-items-center justify-content-center">
