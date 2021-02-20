@@ -22,4 +22,9 @@ $(function () {
       parent.find(".phase-step:hidden").first().fadeIn(300);
     }
   })
+
+  $(document).on('click', '.back-phase', function () {
+    let parent = $(this).parents().first();
+    parent.find(".phase-step:visible").last().fadeOut(300);
+  })
 });

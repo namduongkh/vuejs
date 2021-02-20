@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import "~codemirror/lib/codemirror.css";
 
 * {
   font-family: "Lato", sans-serif;
@@ -17,11 +18,13 @@
   margin: 0 auto;
   width: fit-content;
 
+  .intro-image img {
+    width: 15%;
+  }
+
   .intro_maintext {
     font-size: 6rem;
     color: #555;
-    border: 0.5rem solid #555;
-    padding: 0 1rem;
     text-align: center;
   }
   .intro_subtext {
@@ -33,30 +36,27 @@
     font-size: 0px !important;
   }
   .intro_info_text {
-    display: none;
     width: 80%;
     margin: 0 auto;
     font-size: 1.5rem;
+    opacity: 0;
   }
 }
 .intro_phase_0 {
+  .intro-image img {
+    margin-top: 5rem;
+    width: 20%;
+  }
   .intro_subtext {
     opacity: 0;
   }
   .intro_maintext {
-    border: unset;
-    padding: unset;
+    opacity: 0;
   }
 }
-.intro_phase_2,
-.intro_phase_3 {
+.intro_phase_1 {
   .intro_subtext {
     opacity: 0;
-  }
-  .intro_maintext {
-    color: #cc2c2c;
-    border: unset;
-    padding: unset;
   }
   .intro_maintext_dot {
     opacity: 1;
@@ -66,9 +66,9 @@
     display: block;
   }
 }
-.intro_phase_3 {
+.intro_phase_2 {
   .intro_info_text {
-    display: block;
+    opacity: 1;
   }
 }
 .nav-item {
@@ -114,7 +114,8 @@
   position: relative;
   font-size: 1.1rem;
 
-  .next-phase {
+  .next-phase,
+  .back-phase {
     position: absolute;
     top: 1em;
     right: 1em;
@@ -123,11 +124,19 @@
     height: 2em;
     border-radius: 2em;
     background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .back-phase {
+    left: 1em;
   }
   &.tab-fixed {
     margin-top: 4rem;
 
-    .next-phase {
+    .next-phase,
+    .back-phase {
       position: fixed;
       top: 4em;
     }
@@ -191,4 +200,8 @@
   display: inline-block;
   border-top: 2px solid #ccc;
   width: 5rem;
+}
+.CodeMirror {
+  border: 1px solid #eee;
+  height: fit-content;
 }
