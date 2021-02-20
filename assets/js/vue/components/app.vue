@@ -16,7 +16,12 @@
       </li>
     </ul>
     <div class="main-content">
-      <div class="next-phase"></div>
+      <div class="back-phase">
+        <i class="fa fa-arrow-left"></i>
+      </div>
+      <div class="next-phase">
+        <i class="fa fa-arrow-right"></i>
+      </div>
       <router-view class="container"></router-view>
     </div>
   </div>
