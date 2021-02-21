@@ -25,6 +25,10 @@ $(function () {
 
   $(document).on('click', '.back-phase', function () {
     let parent = $(this).parents().first();
-    parent.find(".phase-step:visible").last().fadeOut(300);
+    if (!$(".phase-step:visible").length) {
+      parent.find(".phase-step").fadeIn(0);
+    } else {
+      parent.find(".phase-step:visible").last().fadeOut(300);
+    }
   })
 });

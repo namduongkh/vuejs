@@ -22,9 +22,8 @@ module.exports = function (env) {
             }
         },
         output: {
-            path: ROOT_PATH + `/${folderName}dist`,
+            path: ROOT_PATH + `/dist`,
             chunkFilename: '[name].js',
-            publicPath: ROOT_PATH
         },
         plugins: [
             new MiniCssExtractPlugin(),

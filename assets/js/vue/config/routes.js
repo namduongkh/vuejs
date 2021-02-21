@@ -1,6 +1,6 @@
 
 import Introduction from "../components/Introduction.vue";
-import Component from "../components/Component.vue";
+import VueComponent from "../components/VueComponent.vue";
 import Router from "../components/Router.vue";
 import Vuex from "../components/Vuex.vue";
 
@@ -15,7 +15,7 @@ const routes = [
   },
   {
     path: "/Component",
-    component: Component,
+    component: VueComponent,
     name: 'Component',
     meta: {
       text: "Component"

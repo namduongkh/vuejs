@@ -1,7 +1,7 @@
 <template>
   <div>
     <Intro />
-    <!-- <ul class="nav nav-pills nav-fill" role="tablist">
+    <ul class="nav nav-pills nav-fill" role="tablist">
       <li
         class="nav-item"
         v-for="(r, index) in routes"
@@ -14,7 +14,7 @@
           >{{ r.meta.text }}
         </router-link>
       </li>
-    </ul> -->
+    </ul>
     <div class="main-content">
       <div class="back-phase">
         <i class="fa fa-arrow-left"></i>
