@@ -3,10 +3,22 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex);
 
-const state = {};
-const mutations = {};
-const actions = {};
-const getters = {};
+const state = {
+  year: null
+};
+const mutations = {
+  setYear(state, year) {
+    state.year = year
+  }
+};
+const actions = {
+  setYear({ commit }, year) {
+    commit('setYear', year)
+  }
+};
+const getters = {
+  year: state => state.year
+};
 
 export default new Vuex.Store({
   state,
