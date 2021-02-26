@@ -1,6 +1,6 @@
 <template>
-  <div id="happy-new-year">
-    <div class="pyro" v-if="year">
+  <div id="happy-new-year" class="bg-info">
+    <div class="pyro" v-if="year" @click="setYear()">
       <div class="before"></div>
       <div class="after"></div>
       <div class="text">Happy New Year {{ year }}!</div>
@@ -10,12 +10,15 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "HappyNewYear",
   computed: {
     ...mapGetters(["year"]),
+  },
+  methods: {
+    ...mapActions(["setYear"]),
   },
 };
 </script>

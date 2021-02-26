@@ -24,6 +24,7 @@
 
     <div class="mt-5">
       <YearInput />
+      <div class="mt-2"></div>
       <HappyNewYear />
     </div>
   </div>
